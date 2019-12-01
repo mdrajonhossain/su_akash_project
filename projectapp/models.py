@@ -36,9 +36,23 @@ YEAR_IN_SCHOOL_CHOICES = [
     ('Higher Math', 'Higher Math'),    
     ('Agriculture', 'Agriculture'),    
 ]
-
-
 class student_four_subject(models.Model):
-
     studentformsave = models.OneToOneField(student_form, on_delete=models.CASCADE, related_name='Std_fours_subject_list')       
     fourth_subject = models.CharField(max_length=30, choices=YEAR_IN_SCHOOL_CHOICES)
+
+
+
+class student_result_sheet(models.Model):
+    studentformsave = models.OneToOneField(student_form, on_delete=models.CASCADE, related_name='Std_subject_result')       
+    
+    bangla = models.IntegerField()
+    mathmathics = models.IntegerField()
+    english = models.IntegerField()
+    science = models.IntegerField()
+    agriculture = models.IntegerField()
+    religion = models.IntegerField()
+
+    def result_total(*args):
+        return bangla+mathmathics+english+science+agriculture+religion
+
+ 

@@ -34,6 +34,7 @@ class student_subject_list(models.Model):
 YEAR_IN_SCHOOL_CHOICES = [
     ('Computer', 'Computer'),
     ('Higher Math', 'Higher Math'),    
+    ('Agriculture', 'Agriculture'),    
 ]
 
 

@@ -21,3 +21,11 @@ class Student_Profile(models.Model):
 	std_Profile_images = models.ImageField(upload_to='std_Profile_images_file/')
 
 
+
+class student_subject_list(models.Model):
+    studentformsave = models.OneToOneField(student_form, on_delete=models.CASCADE, related_name='Std_subject_list')       
+    bangla = models.CharField(max_length=30)
+    mathmathics = models.CharField(max_length=30)
+    english = models.CharField(max_length=30)
+    english = models.CharField(max_length=30)
+    

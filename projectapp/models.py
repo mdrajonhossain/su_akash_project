@@ -50,7 +50,7 @@ class student_result_sheet(models.Model):
     english = models.IntegerField()
     science = models.IntegerField()
     agriculture = models.IntegerField()
-    religion = models.IntegerField()
+    religion = models.IntegerField(max_length=100)
 
     def result_total(*args):
         return bangla+mathmathics+english+science+agriculture+religion

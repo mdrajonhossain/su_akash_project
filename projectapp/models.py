@@ -28,4 +28,16 @@ class student_subject_list(models.Model):
     mathmathics = models.CharField(max_length=30)
     english = models.CharField(max_length=30)
     english = models.CharField(max_length=30)
-    
+
+
+
+YEAR_IN_SCHOOL_CHOICES = [
+    ('Computer', 'Computer'),
+    ('Higher Math', 'Higher Math'),    
+]
+
+
+class student_four_subject(models.Model):
+
+    studentformsave = models.OneToOneField(student_form, on_delete=models.CASCADE, related_name='Std_fours_subject_list')       
+    fourth_subject = models.CharField(max_length=30, choices=YEAR_IN_SCHOOL_CHOICES)
